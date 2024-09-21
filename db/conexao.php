@@ -3,7 +3,7 @@
 //Conexão com o Banco de Dados
 $host = "localhost";
 $user = "root";
-$senha = "179026";
+$senha = "";
 $banco = "controleTarefas";
 
 $conn = new mysqli($host, $user, $senha, $banco);

@@ -6,9 +6,11 @@
     <title>Cadastrar Responsável</title>
 </head>
 <body>
-    <h2>Cadastro de Responsavél</h2> <br>
-    <label for="">Nome: </label>
-    <input type="text" name ="responsavel"> <br>
-    <input type="submit" value = "Cadastrar"name = "Cadastrar">
+    <form action="../db/cad_Responsavel.php" method="post">
+        <h2>Cadastro de Responsavél</h2> <br>
+        <label for="">Nome: </label>
+        <input type="text" name ="responsavel"> <br>
+        <input type="submit" value = "Cadastrar"name = "Cadastrar">
+    </form>
 </body>
 </html>

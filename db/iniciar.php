@@ -28,7 +28,7 @@ if($tarefaini){
     }
 } else {
     //Inicia a tarefa
-    $id_tarefa = $_POST['idtarefa'];
+        $id_tarefa = $_POST['idtarefa'];
         $dataHoraIni = $_POST['datahoraIni'];
 
         $sql = "INSERT INTO 

@@ -4,6 +4,19 @@
     $sql = "SELECT * FROM tarefas";
     $dadosTarefas = mysqli_query($conn,$sql);
 
+    if(isset($_GET['erro'])){
+        if($_GET['erro'] == 1){
+            $erro = "Essa tarefa ainda não foi iniciada!";
+        }else if($_GET['erro'] == 2){
+            $erro = "Essa tarefa já foi finalizada!";
+        }else if($_GET['erro'] == 3){
+            $erro = "Tarefa Pausada!";
+        }else if($_GET['erro'] == 4){
+            $erro = "Essa Tarefa já foi Pausada!";
+        }
+    }else{
+        $erro = "";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +29,7 @@
 <body>
     <h2>Pausar Tarefa</h2> <br>
 
-    <Form action="" method="post">
+    <Form action="../db/pausar.php" method="post">
         <label for="">Selecione a Tarefa:</label>
         <select name="idtarefa"  id="">
             <?php foreach($dadosTarefas as $tarefas){ ?>
@@ -25,6 +38,7 @@
         </select> <br>
         <label for="">Data e Hora:</label>
             <input type="datetime-local" name="datahoraPause" id="datahoraPause"> <br> 
+        <span id="error"><?php echo $erro; ?></span> <br>     
         <input type="submit" value="Pausar Tarefa">
     </Form>
 

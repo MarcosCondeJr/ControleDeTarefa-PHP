@@ -24,19 +24,17 @@ if($tarefafin){
 } else if($tarefaini){
     if(!empty($tarefaini['datahora_inicio'])){
         //Finaliza a tarefa
-        $id_tarefa = $_POST['idtarefa'];
+        $idtarefa = $_POST['idtarefa'];
         $dataHoraFin = $_POST['datahorafin'];
 
         $sql = "INSERT INTO 
                     tarefas_finalizadas(id_tarefa,datahora_final)
-                    VALUE($id_tarefa,'$dataHoraFin')    
+                    VALUE($idtarefa,'$dataHoraFin')    
         ";
 
         $resultado = mysqli_query($conn,$sql);
 
             if($resultado == true){
-                $_SESSION['tarefafin'] = $id_tarefa;
-                $_SESSION['datahorafin'] = $dataHoraFin;
                 header('location: ../view/finalizarTarefa.php?erro=2');
             }  
     }

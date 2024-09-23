@@ -37,7 +37,8 @@
             </select> <br>
         <label for="">Descrição:</label> <br>
             <textarea name="descricao" id=""></textarea> <br> 
-        <input type="submit" value="Cadastrar">            
+        <input type="submit" value="Cadastrar">
+        <a href="../view/home.php">Voltar</a>            
                 
     </form>
 </body>

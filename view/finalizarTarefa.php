@@ -41,6 +41,7 @@
            
             <span id="error"><?php echo $erro; ?></span> <br>    
         <input type="submit" value="Finalizar Tarefa">
+        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

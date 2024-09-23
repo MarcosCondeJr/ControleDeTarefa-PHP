@@ -35,8 +35,6 @@
     $resultado = mysqli_query($conn, $sql);
     
         if ($resultado == true) {
-            header('location: ../view/pausarTarefa.php?erro=3');  // Sucesso ao pausar
+            header('location: ../view/pausarTarefa.php?erro=3');
             exit();
-        } else {
-            echo "Erro ao pausar a tarefa: " . mysqli_error($conn);
         }

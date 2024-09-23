@@ -11,6 +11,7 @@
         <label for="">Nome: </label>
         <input type="text" name ="responsavel"> <br>
         <input type="submit" value = "Cadastrar"name = "Cadastrar">
+        <a href="../view/home.php">Voltar</a>
     </form>
 </body>
 </html>

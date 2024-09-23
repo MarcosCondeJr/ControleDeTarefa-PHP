@@ -37,6 +37,7 @@
             <input type="datetime-local" name="datahoraIni" id="datahoraIni"> <br>
         <span id="error"><?php echo $erro; ?></span> <br>
         <input type="submit" value="Iniciar Tarefa">
+        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

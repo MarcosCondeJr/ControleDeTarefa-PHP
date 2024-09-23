@@ -40,6 +40,7 @@
             <input type="datetime-local" name="datahoraPause" id="datahoraPause"> <br> 
         <span id="error"><?php echo $erro; ?></span> <br>     
         <input type="submit" value="Pausar Tarefa">
+        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

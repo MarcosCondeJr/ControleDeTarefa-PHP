@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/estilos/style.css">
     <title>Tarefas</title>
 </head>
 <body>
@@ -42,17 +43,17 @@
 
                     // Cálculo de tempo entre início e pausa
                     $interval_inicio_pause = $datetime_inicio->diff($datetime_pause);
-                    $tempo_inicio_pause = $interval_inicio_pause->format('%h horas, %i minutos');
+                    $tempo_inicio_pause = $interval_inicio_pause->format('%d dias, %h horas, %i minutos');
 
                     // Cálculo de tempo entre retomada e hora final
                     $interval_retomar_final = $datetime_retomar->diff($datetime_final);
-                    $tempo_retomar_final = $interval_retomar_final->format('%h horas, %i minutos');
+                    $tempo_retomar_final = $interval_retomar_final->format('%d dias, %h horas, %i minutos');
 
                     $tempoGasto = "$tempo_inicio_pause + $tempo_retomar_final";
                 } else {
                     $datetime_final = new DateTime($dataHoraFinal);
                     $interval_total = $datetime_inicio->diff($datetime_final);
-                    $tempoGasto = $interval_total->format('%h horas, %i minutos');
+                    $tempoGasto = $interval_total->format('%d dias, %h horas, %i minutos');
                 }
             } else if (empty($dataHoraInicio)){
                 $tempoGasto = "Não Iniciada";    

@@ -8,6 +8,16 @@
     //Busca as categorias e armazena em uma variavél 
     $sql_cat = "SELECT * FROM categorias";
     $dadosCategoria = mysqli_query($conn, $sql_cat);
+
+    if(isset($_GET['erro'])){
+        if($_GET['erro'] == 1){
+            $erro = "Tarefa Cadastrada com sucesso!";
+        }else if($_GET['erro'] == 2){
+            $erro = "Erro, não foi possivel cadastrar a tarefa!";
+        }
+    }else{
+        $erro = "";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/estilos/style.css">
     <title>Cadastrar Tarefa</title>
 </head>
 <body>
@@ -37,6 +48,7 @@
             </select> <br>
         <label for="">Descrição:</label> <br>
             <textarea name="descricao" id=""></textarea> <br> 
+        <span><?php echo $erro ?></span> <br>
         <input type="submit" value="Cadastrar">
         <a href="../view/home.php">Voltar</a>            
                 

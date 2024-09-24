@@ -13,6 +13,8 @@
             $erro = "Tarefa Pausada!";
         }else if($_GET['erro'] == 4){
             $erro = "Essa Tarefa já foi Pausada!";
+        }else if($_GET['erro'] == 5){
+            $erro = "É necessário !";
         }
     }else{
         $erro = "";
@@ -24,6 +26,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/estilos/style.css">
     <title>Pausar Tarefa</title>
 </head>
 <body>

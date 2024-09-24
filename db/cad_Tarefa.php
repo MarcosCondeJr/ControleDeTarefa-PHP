@@ -15,5 +15,7 @@ $sql = "INSERT INTO
 $resultado = mysqli_query($conn,$sql);
 
 if($resultado == true){
-    header('location: ../view/home.php');
+    header('location: ../view/cadastrarTarefa.php?erro=1');
+} else {
+    header('location: ../view/cadastrarTarefa.php?erro=2');
 }

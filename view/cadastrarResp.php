@@ -18,16 +18,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../view/estilos/style.css">
-    <title>Cadastrar Responsável</title>
+    <title>Cadastro de Responsável</title>
 </head>
 <body>
     <form action="../db/cad_Responsavel.php" method="post">
-        <h2>Cadastro de Responsavél</h2> <br>
+        <h1>Cadastrar Responsavél</h1> <br>
         <label for="">Nome: </label>
         <input type="text" name ="responsavel"> <br>
         <span><?php echo $erro ?></span> <br>
-        <input type="submit" value = "Cadastrar"name = "Cadastrar"> <br>
-        <a href="../view/home.php">Voltar</a>
+        <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">
+        <input type="submit" value = "Cadastrar"name = "Cadastrar">
     </form>
 </body>
 </html>

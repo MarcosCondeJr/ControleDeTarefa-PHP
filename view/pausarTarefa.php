@@ -30,7 +30,7 @@
     <title>Pausar Tarefa</title>
 </head>
 <body>
-    <h2>Pausar Tarefa</h2> <br>
+    <h1>Pausar Tarefa</h1> <br>
 
     <Form action="../db/pausar.php" method="post">
         <label for="">Selecione a Tarefa:</label>
@@ -41,9 +41,9 @@
         </select> <br>
         <label for="">Data e Hora:</label>
             <input type="datetime-local" name="datahoraPause" id="datahoraPause"> <br> 
-        <span id="error"><?php echo $erro; ?></span> <br>     
+        <span id="error"><?php echo $erro; ?></span> <br>
+        <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">     
         <input type="submit" value="Pausar Tarefa">
-        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

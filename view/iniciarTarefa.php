@@ -25,7 +25,7 @@
     <title>Iniciar Tarefa</title>
 </head>
 <body>
-    <h2>Iniciar Tarefa</h2> <br>
+    <h1>Iniciar Tarefa</h1> <br>
 
     <Form action="../db/iniciar.php" method="post">
         <label for="">Selecione a Tarefa:</label>
@@ -37,8 +37,8 @@
         <label for="">Data e Hora:</label>
             <input type="datetime-local" name="datahoraIni" id="datahoraIni"> <br>
         <span id="error"><?php echo $erro; ?></span> <br>
+        <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">
         <input type="submit" value="Iniciar Tarefa">
-        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

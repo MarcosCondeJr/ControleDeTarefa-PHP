@@ -1,5 +1,5 @@
 <?php
-    include '../db/exibir.php';
+    include '../db/listar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@
     <title>Tarefas</title>
 </head>
 <body>
-    <h2>Tarefas</h2>
+    <h1>Tarefas</h1>
     
     <table border="1">
         <tr>
@@ -23,7 +23,7 @@
             <td>Pausa<br>Data/hora </td></td>
             <td>Retomada<br> Data/hora</td>
             <td>Finzalido<br> Data/hora</td>
-            <td>Tempo Gasto</td>
+            <td>Status/<br>Tempo Gasto</td>
         </tr>
         <?php foreach($listTarefas as $tarefas) { 
             // Cálculo do tempo gasto por tarefa
@@ -43,17 +43,17 @@
 
                     // Cálculo de tempo entre início e pausa
                     $interval_inicio_pause = $datetime_inicio->diff($datetime_pause);
-                    $tempo_inicio_pause = $interval_inicio_pause->format('%d dias, %h horas, %i minutos');
+                    $tempo_inicio_pause = $interval_inicio_pause->format('%m mêses, %d dias, %h horas, %i minutos');
 
                     // Cálculo de tempo entre retomada e hora final
                     $interval_retomar_final = $datetime_retomar->diff($datetime_final);
-                    $tempo_retomar_final = $interval_retomar_final->format('%d dias, %h horas, %i minutos');
+                    $tempo_retomar_final = $interval_retomar_final->format('%m mêses, %d dias, %h horas, %i minutos');
 
                     $tempoGasto = "$tempo_inicio_pause + $tempo_retomar_final";
                 } else {
                     $datetime_final = new DateTime($dataHoraFinal);
                     $interval_total = $datetime_inicio->diff($datetime_final);
-                    $tempoGasto = $interval_total->format('%d dias, %h horas, %i minutos');
+                    $tempoGasto = $interval_total->format('%m mêses, %d dias, %h horas, %i minutos');
                 }
             } else if (empty($dataHoraInicio)){
                 $tempoGasto = "Não Iniciada";    
@@ -93,6 +93,6 @@
         </tr>
         <?php } ?>
     </table> <br>
-    <a href="../view/home.php">Voltar</a>
+    <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">
 </body>
 </html>

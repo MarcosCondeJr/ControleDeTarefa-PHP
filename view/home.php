@@ -7,15 +7,24 @@
     <title>Controle de Tarefas</title>
 </head>
 <body>
-    <h2>Controle de Tarefas</h2> <br>
-    <a href="../view/cadastrarTarefa.php" >Cadastrar Tarefa</a> <br>
-    <a href="../view/cadastrarResp.php">Cadastrar Responsável</a> <br>
-    <a href="../view/cadastrarCat.php">Cadastrar Categoria</a> <br>
-    <a href="../view/listar_tarefas.php">Listar Tarefa</a> <br>
-    <a href="../view/iniciarTarefa.php">Iniciar Tarefa</a> <br>
-    <a href="../view/finalizarTarefa.php">Finalizar Tarefa</a> <br>
-    <a href="../view/pausarTarefa.php">Pausar Tarefa</a> <br>
-    <a href="../view/retomarTarefa.php">Retomar Tarefa</a> <br>
+    <h1>Controle de Tarefas</h1> <br>
+    
+    <div class="container-button">
+        <input class="button" type="button" value="Cadastrar Tarefa" onclick="window.location.href='../view/cadastrarTarefa.php';">
+        <input class="button" type="button" value="Iniciar Tarefa" onclick="window.location.href='../view/iniciarTarefa.php';"> <br>
+
+        <input class="button" type="button" value="Cadastrar Responsável" onclick="window.location.href='../view/cadastrarResp.php';">
+        <input class="button" type="button" value="Pausar Tarefa" onclick="window.location.href='../view/pausarTarefa.php';"> <br>
+
+        <input class="button" type="button" value="Cadastrar Categoria" onclick="window.location.href='../view/cadastrarCat.php';">
+        <input class="button" type="button" value="Retomar Tarefa" onclick="window.location.href='../view/retomarTarefa.php';"> <br>
+
+        <input class="button" type="button" value="Listar Responsáveis" onclick="window.location.href='../view/listarResponsaveis.php';">
+        <input class="button" type="button" value="Finalizar Tarefa" onclick="window.location.href='../view/finalizarTarefa.php';"> <br>
+
+        <input class="button" type="button" value="Listar Tarefas" onclick="window.location.href='../view/listar_tarefas.php';">
+    </div>
+    
     
 </body>
 </html>

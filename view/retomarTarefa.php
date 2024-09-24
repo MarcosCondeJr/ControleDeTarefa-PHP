@@ -27,7 +27,7 @@
     <title>Retomar Tarefa</title>
 </head>
 <body>
-    <h2>Retomar Tarefa</h2> <br>
+    <h1>Retomar Tarefa</h1> <br>
 
     <Form action="../db/retomar.php" method="post">
         <label for="">Selecione a Tarefa:</label>
@@ -39,8 +39,8 @@
         <label for="">Data e Hora:</label>
             <input type="datetime-local" name="datahoraRet" id="datahoraRet"> <br>
         <span id="error"><?php echo $erro; ?></span> <br>    
+        <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">
         <input type="submit" value="Retomar Tarefa">
-        <a href="../view/home.php">Voltar</a>
     </Form>
 
 </body>

@@ -16,9 +16,11 @@ require_once("../db/conexao.php");
         LEFT JOIN tarefas_iniciadas ON tarefas.id_tarefa = tarefas_iniciadas.id_tarefa
         LEFT JOIN tarefas_pause ON tarefas.id_tarefa = tarefas_pause.id_tarefa
         LEFT JOIN tarefas_retomar ON tarefas.id_tarefa = tarefas_retomar.id_tarefa
-        LEFT JOIN tarefas_finalizadas ON tarefas.id_tarefa = tarefas_finalizadas.id_tarefa";
+        LEFT JOIN tarefas_finalizadas ON tarefas.id_tarefa = tarefas_finalizadas.id_tarefa
+        ORDER BY tarefas.id_tarefa";
 
     $listTarefas = mysqli_query($conn, $sql);
 
+    
     
    

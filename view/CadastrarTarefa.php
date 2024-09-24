@@ -29,28 +29,28 @@
     <title>Cadastrar Tarefa</title>
 </head>
 <body>
-    <h2>Cadastrar Tarefa</h2> <br>
+    <h1>Cadastrar Tarefa</h1> <br>
 
     <form action="../db/cad_Tarefa.php" method="post">
         <label for="">Titulo:</label>
-            <input type="text" name="nomeTarefa" id="nomeTarefa">
+            <input type="text" name="nomeTarefa" id="nomeTarefa"> <br>
         <label for="">Responsável: </label>
             <select name="responsavel" id="">
                 <?php foreach($dadosResponsavel as $responsaveis) {?>
                     <option value="<?php echo $responsaveis['id_responsavel']?>"><?php echo $responsaveis['nome']?></option>
                 <?php } ?> 
-            </select>   
+            </select>   <br>
         <label for="">Categoria: </label>
             <select name="categoria" id="">
                 <?php foreach($dadosCategoria as $categoria) {?>
                     <option value="<?php echo $categoria['id_categoria']?>"><?php echo $categoria['nome_categoria']?></option>
                 <?php } ?> 
-            </select> <br>
+            </select> <br> <br>
         <label for="">Descrição:</label> <br>
-            <textarea name="descricao" id=""></textarea> <br> 
+            <textarea name="descricao" id=""></textarea>  <br>
         <span><?php echo $erro ?></span> <br>
-        <input type="submit" value="Cadastrar">
-        <a href="../view/home.php">Voltar</a>            
+        <input type="button" value="Voltar" onclick="window.location.href='../view/home.php';">
+        <input type="submit" value="Cadastrar">           
                 
     </form>
 </body>

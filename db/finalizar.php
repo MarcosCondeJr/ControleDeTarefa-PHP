@@ -20,6 +20,7 @@ $tarefafin = mysqli_fetch_assoc($resultadoFin);
 if($tarefafin){
     if(!empty($tarefafin['datahora_final'])){
         header('location: ../view/finalizarTarefa.php?erro=3');
+        exit();
     }
 } else if($tarefaini){
     if(!empty($tarefaini['datahora_inicio'])){
@@ -36,10 +37,12 @@ if($tarefafin){
 
             if($resultado == true){
                 header('location: ../view/finalizarTarefa.php?erro=2');
+                exit();
             }  
     }
 } else {
     header('location: ../view/finalizarTarefa.php?erro=1');
+    exit();
 }
 
 

@@ -1,0 +1,34 @@
+Projeto Controle de Tarefas - Marcos Conde
+
+Olá Sr.Avaliador, 
+Eu estou muito feliz em está participando dessa seletiva e por ter concluido esse projeto proposto por vocês. 
+
+O projeto cumpre com os requisitos que foram enviados, tais como:
+
+ - Cadastro de categoria da tarefa
+ - Cadastro de responsável
+ - Cadastro de tarefa, vinculando categoria e responsável
+ - Iniciar tarefa (data e hora)
+      - não pode iniciar uma tarefa se ela já foi finalizada
+ - Pausar tarefa (data e hora)
+      - não pode pausar uma tarefa se ela não foi iniciada
+      - não pode pausar uma tarefa se ela já foi finalizada
+ - Finalizar tarefa (data e hora)
+      - não pode finalizar uma tarefa se ela não foi inicializada
+      - não pode finalizar uma tarefa se ela já foi finalizada
+ - Demonstrar tarefas com categoria, responsável e suas movimentações de Início, Pausa e Finalização, demonstrando o tempo gasto. 
+
+Incrementos:
+ - Retomar Tarefa : Essa função faz com que após eu pausar uma tarefa, eu possa retomar ela novamente, fazendo com que a tarefa volte a está em adamento.
+	- não posso retomar uma tarefa se ela não foi pausada.  
+	- não pode retomar uma tarefa se ela já foi finalizada
+
+ - Lista de Responsaveis: Lista de todos os responsáveis cadastrado no sistema
+
+Informações finais: 
+
+Este projeto foi desenvolvido com PHP Puro e Banco de dados mySql.
+
+Desde já, agradeço pela participação na seletiva, e estou entusiasmado para as proximas etapas.
+
+att, Marcos Conde

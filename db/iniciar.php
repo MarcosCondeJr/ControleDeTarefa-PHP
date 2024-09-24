@@ -20,11 +20,13 @@ $tarefafin = mysqli_fetch_assoc($resultadoFin);
 if($tarefaini){
     if(!empty($tarefaini['datahora_inicio'])){
         header('location: ../view/iniciarTarefa.php?erro=6');
+        exit();
     }
 }else if($tarefafin){
     //Verifica se já foi Finalizada
     if(!empty($tarefafin['datahora_final'])){
         header('location: ../view/iniciarTarefa.php?erro=4');
+        exit();
     }
 } else {
     //Inicia a tarefa
@@ -42,6 +44,7 @@ if($tarefaini){
             $_SESSION['idtarefa'] = $id_tarefa;
             $_SESSION['dataHoraIni'] = $dataHoraIni;
             header('location: ../view/iniciarTarefa.php?erro=5');
+            exit();
         }
 }
  

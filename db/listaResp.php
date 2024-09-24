@@ -1,5 +1,6 @@
 <?php
 
+//Pesquisa os Responsaveis cadastrados
 require_once("../db/conexao.php");
 
  $sql = "SELECT * FROM responsaveis

@@ -16,6 +16,8 @@ $resultado = mysqli_query($conn,$sql);
 
 if($resultado == true){
     header('location: ../view/cadastrarTarefa.php?erro=1');
+    exit();
 } else {
     header('location: ../view/cadastrarTarefa.php?erro=2');
+    exit();
 }

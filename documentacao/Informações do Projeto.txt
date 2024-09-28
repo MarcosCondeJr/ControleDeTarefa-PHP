@@ -1,9 +1,6 @@
 Projeto Controle de Tarefas - Marcos Conde
 
-Olá Sr.Avaliador, 
-Eu estou muito feliz em está participando dessa seletiva e por ter concluido esse projeto proposto por vocês. 
-
-O projeto cumpre com os requisitos que foram enviados, tais como:
+O projeto cumpre com as seguintes funções:
 
  - Cadastro de categoria da tarefa
  - Cadastro de responsável
@@ -28,7 +25,3 @@ Incrementos:
 Informações finais: 
 
 Este projeto foi desenvolvido com PHP Puro e Banco de dados mySql.
-
-Desde já, agradeço pela participação na seletiva, e estou entusiasmado para as proximas etapas.
-
-att, Marcos Conde

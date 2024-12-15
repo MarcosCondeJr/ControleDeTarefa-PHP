@@ -25,22 +25,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../view/estilos/style.css">
+    <link rel="stylesheet" href="../view/estilos/estilizacao.css">
     <title>Cadastrar Tarefa</title>
 </head>
 <body>
     <h1>Cadastrar Tarefa</h1> <br>
 
     <form action="../db/cad_Tarefa.php" method="post">
-        <label for="">Titulo:</label>
+        <label for="">Titulo:</label> <br>
             <input type="text" name="nomeTarefa" id="nomeTarefa"> <br>
-        <label for="">Responsável: </label>
+        <label for="">Responsável: </label> <br>
             <select name="responsavel" id="">
                 <?php foreach($dadosResponsavel as $responsaveis) {?>
                     <option value="<?php echo $responsaveis['id_responsavel']?>"><?php echo $responsaveis['nome']?></option>
                 <?php } ?> 
             </select>   <br>
-        <label for="">Categoria: </label>
+        <label for="">Categoria: </label> <br>
             <select name="categoria" id="">
                 <?php foreach($dadosCategoria as $categoria) {?>
                     <option value="<?php echo $categoria['id_categoria']?>"><?php echo $categoria['nome_categoria']?></option>

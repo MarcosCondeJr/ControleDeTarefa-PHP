@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../view/estilos/style.css">
+    <link rel="stylesheet" href="../view/estilos/estilizacao.css">
     <title>Tarefas</title>
 </head>
 <body>
@@ -31,6 +31,11 @@
             $dataHoraPause = $tarefas['datahora_pause'];
             $dataHoraRetomar = $tarefas['datahora_retomar'];
             $dataHoraFinal = $tarefas['datahora_final'];
+
+            $meses = null;
+            $dias = null;
+            $minutos = null;
+            $horas = null;
             $tempoGasto = "";
 
             if (!empty($dataHoraInicio) && !empty($dataHoraFinal)) {
@@ -43,17 +48,18 @@
 
                     // Cálculo de tempo entre início e pausa
                     $interval_inicio_pause = $datetime_inicio->diff($datetime_pause);
-                    $tempo_inicio_pause = $interval_inicio_pause->format('%m mêses, %d dias, %h horas, %i minutos');
 
                     // Cálculo de tempo entre retomada e hora final
                     $interval_retomar_final = $datetime_retomar->diff($datetime_final);
-                    $tempo_retomar_final = $interval_retomar_final->format('%m mêses, %d dias, %h horas, %i minutos');
 
-                    $tempoGasto = "$tempo_inicio_pause + $tempo_retomar_final";
+                    $meses = $interval_inicio_pause->m + $interval_retomar_final->m;
+                    $dias = $interval_inicio_pause->d + $interval_retomar_final->d;
+                    $horas = $interval_inicio_pause->h + $interval_retomar_final->h;
+                    $minutos = $interval_inicio_pause->i + $interval_retomar_final->i;
+
+                    $tempoGasto = "$meses mêses, $dias dias, $horas horas, $minutos minutos";
                 } else {
-                    $datetime_final = new DateTime($dataHoraFinal);
-                    $interval_total = $datetime_inicio->diff($datetime_final);
-                    $tempoGasto = $interval_total->format('%m mêses, %d dias, %h horas, %i minutos');
+                    $tempoGasto = "$meses mêses, $dias dias, $horas horas, $minutos minutos";
                 }
             } else if (empty($dataHoraInicio)){
                 $tempoGasto = "Não Iniciada";    
